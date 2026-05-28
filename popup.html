@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GeorgeVault</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Vault</h1>
+          <p id="site"></p>
+        </div>
+        <button id="lock-btn" class="ghost" type="button" style="margin-left:auto; display:none">Lock</button>
+      </div>
+    </header>
+
+    <!-- Setup master password (first run) -->
+    <section id="setup" class="form" style="display:none">
+      <h2>Create master password</h2>
+      <p class="hint">This encrypts your vault. It cannot be recovered if lost.</p>
+      <input id="s-pass" type="password" placeholder="master password (min 8 chars)" />
+      <input id="s-pass2" type="password" placeholder="confirm master password" />
+      <button id="s-create" class="primary">Create vault</button>
+      <p id="s-error" class="error"></p>
+    </section>
+
+    <!-- Unlock (returning user) -->
+    <section id="unlock" class="form" style="display:none">
+      <h2>Unlock vault</h2>
+      <input id="u-pass" type="password" placeholder="master password" />
+      <button id="u-unlock" class="primary">Unlock</button>
+      <p id="u-error" class="error"></p>
+    </section>
+
+    <!-- Main app (after unlock) -->
+    <div id="app" style="display:none">
+      <section id="list" class="list"></section>
+
+      <section class="form">
+        <h2>Add credential</h2>
+        <input id="f-site" placeholder="site (e.g. github.com)" />
+        <input id="f-user" placeholder="username or email" />
+        <div class="row">
+          <input id="f-pass" type="password" placeholder="password" />
+          <button id="f-reveal" class="ghost" type="button">Show</button>
+        </div>
+        <button id="f-save" class="primary">Save</button>
+      </section>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
