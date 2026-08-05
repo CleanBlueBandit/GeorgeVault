@@ -83,4 +83,10 @@ Rather than simply assigning values to input fields, it dispatches the same even
 
 GeorgeVault started as a personal project to better understand modern browser cryptography and secure credential storage.
 
+I think that cloud-based password managers defy their own purpose, they are meant to keep your passwords safe, so creating weak links, like cloud servers, dont make sence.
+
+I Believe keeping this open source reassures the user that the extension does not sell client data the moment it gets its paws on internet connection.
+
 Rather than relying on third-party encryption libraries, the project uses the browser's native **Web Crypto API**, allowing me to explore key derivation, authenticated encryption, browser storage, and extension APIs while building something practical.
+
+These reasons are the most important in current times where megacorporations think they own your data and are allowed to invade your privacy because you use their service.
